@@ -55,3 +55,5 @@ export WINEARCH=win32
 
 export PATH
 export HMC
+
+unset SSH_ASKPASS
