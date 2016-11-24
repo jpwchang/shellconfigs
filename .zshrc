@@ -28,20 +28,6 @@ setopt completealiases
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 #
 
-# configure syntax highlighting and autosuggestions
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/zsh-autosuggestions/autosuggestions.zsh
-# Enable autosuggestions automatically.
-zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
-bindkey '^f' vi-forward-word
-bindkey '^[[1;5C' vi-end-of-line
-AUTOSUGGESTION_ACCEPT_RIGHT_ARROW=1
-AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=4'
-#
-
 # aliases
 alias gvim='gvim --servername GVIM --remote-tab "$1"'
 alias python=python2
@@ -49,11 +35,21 @@ alias python=python2
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/Downloads/adt-bundle-linux-x86_64/sdk/platform-tools:$HOME/Downloads/adt-bundle-linux-x86_64/sdk/tools:$HOME/pebble-dev/PebbleSDK-2.0.2/bin:/usr/local/MATLAB/R2013b/bin
 HMC=$HOME/Dropbox/School/hmc
+STO=$HOME/.local/share/wineprefixes/wine/drive_c/users/Public/Games/Cryptic
 
 export WINEPREFIX=$HOME/.local/share/wineprefixes/wine/
 export WINEARCH=win32
 
 export PATH
 export HMC
+export STO
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda/lib64:/opt/cuda/extras/CUPTI/lib64"
+export CUDA_HOME=/opt/cuda
 
 unset SSH_ASKPASS
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
+

@@ -3,8 +3,7 @@
 cd ~
 
 sudo pacman -Syu zsh-syntax-highlighting
-git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-history-substring-search.git
+sudo pacman -Syu zsh-autosuggestions
 
 cp -r .conky ..
 cp .zshrc ..
