@@ -21,7 +21,7 @@ setopt completealiases
 
 #### Powerlevel9k configuration ####
 
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time history dir rbenv anaconda vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs load ram battery)
@@ -34,6 +34,9 @@ POWERLEVEL9K_DIR_HOME_BACKGROUND='green'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='005'
 POWERLEVEL9K_STATUS_OK_BACKGROUND='green'
 POWERLEVEL9K_STATUS_OK_FOREGROUND='000'
+POWERLEVEL9K_DIR_PATH_SEPARATOR="  "
+POWERLEVEL9K_TIME_FORMAT="%D{%D %H:%M:%S}"
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 #### -------------------------- ####
 
