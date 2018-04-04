@@ -13,6 +13,13 @@
     background-color: rgba(255, 255, 255, 0.25);
 }
 
+.budgie-panel:backdrop {
+    color: white;
+    background-color: rgba(43, 46, 55, 0.0); }
+.budgie-panel.transparent {
+    background-color: rgba(43, 46, 55, 0.0);
+    color: white; }
+
 .budgie-panel .end-region {
     background-color: rgba(0,0,0,0.5);
     border: 1px solid rgba(129, 143, 156, 0.75);
@@ -24,6 +31,22 @@
     background-color: rgba(0,0,0,0.25);
 }
 
-.workspace-switcher .current-workspace {
+.workspace-switcher .workspace-item.current-workspace {
     background-color: rgba(255,255,255, 0.25);
+}
+
+.workspace-switcher .workspace-layout {
+  border: 0 solid #F5F6F7; }
+  .top .workspace-switcher .workspace-layout:dir(ltr),
+  .bottom .workspace-switcher .workspace-layout:dir(ltr) {
+    border-left-width: 0px; }
+  .top .workspace-switcher .workspace-layout:dir(rtl),
+  .bottom .workspace-switcher .workspace-layout:dir(rtl) {
+    border-right-width: 0px; }
+  .left .workspace-switcher .workspace-layout,
+  .right .workspace-switcher .workspace-layout {
+    border-top-width: 1px; }
+
+.workspace-switcher .workspace-add-button {
+    border: 0 solid rgba(0,0,0,0.0);
 }
